@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block titulo %} Mis publicaciones {% endblock %} 
+
+{% block contenido_principal %}
+<h2>Libros registrados</h2>
+
+<!-- Agregar Canción -->
+<div class="form-group">
+      <a href="/libro/registrar/">Registrar un nuevo libro</a>
+</div>
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+                                <th></th>
+				<th>Titulo</th>
+				<th>Autor</th>
+                                <th>Publicador</th>
+                                <th></th>
+				<th class="col-md-1"></th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for libro in libros %}
+			<tr>
+                            <td><a href="/libro/modificar/{{ libro._id.toString()}}">Modificar</a></td>
+				<td>{{ libro.titulo }}</td>
+				<td>{{ libro.autor }}</td>
+                                <td>{{ libro.publicador }}</td>
+                                <td><a href="/libro/eliminar/{{ libro._id.toString()}}" style="color: red;">Eliminar</a></td>
+                                
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+
+{% endblock %}

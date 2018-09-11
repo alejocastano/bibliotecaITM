@@ -1,0 +1,20 @@
+{
+    "name": "bibliotecaITM",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "usuario",
+    "contributors": [],
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "express-session": "^1.15.6",
+        "mongodb": "^2.2.33",
+        "swig": "^1.4.2"
+    }
+}
